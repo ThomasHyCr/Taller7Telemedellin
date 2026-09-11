@@ -12,6 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: MapLayout
   m_EditorClassIdentifier: Assembly-CSharp::DungeonLayoutSO
-  Rooms: []
+  Rooms:
+  - GridPosition: {x: 0, y: 0}
+    RoomImage: {fileID: 0}
+  - GridPosition: {x: 1, y: 0}
+    RoomImage: {fileID: 0}
+  - GridPosition: {x: 2, y: 0}
+    RoomImage: {fileID: 0}
+  - GridPosition: {x: 0, y: 1}
+    RoomImage: {fileID: 0}
+  - GridPosition: {x: 0, y: 2}
+    RoomImage: {fileID: 0}
   Connections: []
   StartingRoom: {x: 0, y: 0}
