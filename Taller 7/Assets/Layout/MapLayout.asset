@@ -15,13 +15,132 @@ MonoBehaviour:
   Rooms:
   - GridPosition: {x: 0, y: 0}
     RoomImage: {fileID: 0}
+  - GridPosition: {x: -3, y: -4}
+    RoomImage: {fileID: 0}
+  - GridPosition: {x: 3, y: -3}
+    RoomImage: {fileID: 0}
+  - GridPosition: {x: -3, y: 4}
+    RoomImage: {fileID: 0}
+  - GridPosition: {x: 3, y: 4}
+    RoomImage: {fileID: 0}
+  - GridPosition: {x: -2, y: -4}
+    RoomImage: {fileID: 0}
+  - GridPosition: {x: -2, y: -2}
+    RoomImage: {fileID: 0}
+  - GridPosition: {x: -2, y: -1}
+    RoomImage: {fileID: 0}
+  - GridPosition: {x: -2, y: 1}
+    RoomImage: {fileID: 0}
+  - GridPosition: {x: -2, y: 3}
+    RoomImage: {fileID: 0}
+  - GridPosition: {x: -3, y: 3}
+    RoomImage: {fileID: 0}
+  - GridPosition: {x: -1, y: -1}
+    RoomImage: {fileID: 0}
+  - GridPosition: {x: -1, y: 0}
+    RoomImage: {fileID: 0}
+  - GridPosition: {x: 1, y: -2}
+    RoomImage: {fileID: 0}
+  - GridPosition: {x: 1, y: -1}
+    RoomImage: {fileID: 0}
   - GridPosition: {x: 1, y: 0}
     RoomImage: {fileID: 0}
-  - GridPosition: {x: 2, y: 0}
+  - GridPosition: {x: 1, y: 1}
     RoomImage: {fileID: 0}
-  - GridPosition: {x: 0, y: 1}
+  - GridPosition: {x: 1, y: 2}
     RoomImage: {fileID: 0}
-  - GridPosition: {x: 0, y: 2}
+  - GridPosition: {x: 1, y: 3}
     RoomImage: {fileID: 0}
-  Connections: []
-  StartingRoom: {x: 0, y: 0}
+  - GridPosition: {x: 2, y: -3}
+    RoomImage: {fileID: 0}
+  - GridPosition: {x: 2, y: -2}
+    RoomImage: {fileID: 0}
+  - GridPosition: {x: 3, y: -2}
+    RoomImage: {fileID: 0}
+  - GridPosition: {x: 3, y: 1}
+    RoomImage: {fileID: 0}
+  - GridPosition: {x: 3, y: 3}
+    RoomImage: {fileID: 0}
+  Connections:
+  - From: {x: -3, y: -4}
+    Direction: 3
+    To: {x: -2, y: -4}
+  - From: {x: -2, y: -4}
+    Direction: 0
+    To: {x: -2, y: -2}
+  - From: {x: -2, y: -2}
+    Direction: 0
+    To: {x: -2, y: -1}
+  - From: {x: -2, y: -1}
+    Direction: 0
+    To: {x: -2, y: 1}
+  - From: {x: -2, y: -1}
+    Direction: 3
+    To: {x: -1, y: -1}
+  - From: {x: -2, y: 1}
+    Direction: 0
+    To: {x: -2, y: 3}
+  - From: {x: -2, y: 3}
+    Direction: 2
+    To: {x: -3, y: 3}
+  - From: {x: -3, y: 3}
+    Direction: 2
+    To: {x: -3, y: 4}
+  - From: {x: -1, y: -1}
+    Direction: 0
+    To: {x: -1, y: 0}
+  - From: {x: -1, y: -1}
+    Direction: 3
+    To: {x: 1, y: -1}
+  - From: {x: -1, y: 0}
+    Direction: 3
+    To: {x: 0, y: 0}
+  - From: {x: 0, y: 0}
+    Direction: 3
+    To: {x: 1, y: 0}
+  - From: {x: 1, y: 0}
+    Direction: 0
+    To: {x: 1, y: 1}
+  - From: {x: 1, y: 1}
+    Direction: 0
+    To: {x: 1, y: 2}
+  - From: {x: 1, y: 2}
+    Direction: 0
+    To: {x: 1, y: 3}
+  - From: {x: 1, y: 3}
+    Direction: 3
+    To: {x: 3, y: 3}
+  - From: {x: 3, y: 3}
+    Direction: 0
+    To: {x: 3, y: 4}
+  - From: {x: 3, y: 3}
+    Direction: 0
+    To: {x: 3, y: 4}
+  - From: {x: 1, y: 1}
+    Direction: 3
+    To: {x: -2, y: 1}
+  - From: {x: 1, y: 1}
+    Direction: 2
+    To: {x: 3, y: 1}
+  - From: {x: 1, y: -1}
+    Direction: 0
+    To: {x: 0, y: 1}
+  - From: {x: 1, y: -1}
+    Direction: 1
+    To: {x: 1, y: -2}
+  - From: {x: 1, y: -2}
+    Direction: 3
+    To: {x: 2, y: -2}
+  - From: {x: 2, y: -2}
+    Direction: 1
+    To: {x: 2, y: -3}
+  - From: {x: 2, y: -3}
+    Direction: 3
+    To: {x: 3, y: -3}
+  - From: {x: 2, y: -2}
+    Direction: 3
+    To: {x: 3, y: -2}
+  - From: {x: 3, y: -2}
+    Direction: 0
+    To: {x: 3, y: 1}
+  StartingRoom: {x: 3, y: -3}
