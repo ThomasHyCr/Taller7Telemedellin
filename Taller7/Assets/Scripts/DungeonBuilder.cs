@@ -4,7 +4,7 @@ public class DungeonBuilder : MonoBehaviour
 {
     [SerializeField] private DungeonLayoutSO layout;
 
-    void Start()
+    void Awake()
     {
         BuildGraph();
     }

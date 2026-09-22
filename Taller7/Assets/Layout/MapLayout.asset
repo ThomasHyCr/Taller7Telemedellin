@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 02262cae497d48a4b85a552279ec8f59, type: 3}
   m_Name: MapLayout
   m_EditorClassIdentifier: Assembly-CSharp::DungeonLayoutSO
   Rooms:
@@ -84,7 +84,7 @@ MonoBehaviour:
     Direction: 2
     To: {x: -3, y: 3}
   - From: {x: -3, y: 3}
-    Direction: 2
+    Direction: 0
     To: {x: -3, y: 4}
   - From: {x: -1, y: -1}
     Direction: 0
@@ -113,18 +113,15 @@ MonoBehaviour:
   - From: {x: 3, y: 3}
     Direction: 0
     To: {x: 3, y: 4}
-  - From: {x: 3, y: 3}
-    Direction: 0
-    To: {x: 3, y: 4}
-  - From: {x: 1, y: 1}
-    Direction: 3
-    To: {x: -2, y: 1}
   - From: {x: 1, y: 1}
     Direction: 2
+    To: {x: -2, y: 1}
+  - From: {x: 1, y: 1}
+    Direction: 3
     To: {x: 3, y: 1}
   - From: {x: 1, y: -1}
     Direction: 0
-    To: {x: 0, y: 1}
+    To: {x: 1, y: 0}
   - From: {x: 1, y: -1}
     Direction: 1
     To: {x: 1, y: -2}

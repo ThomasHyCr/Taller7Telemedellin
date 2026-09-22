@@ -1,14 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable]
-public class RoomConnectionData
-{
-    public Vector2Int From;
-    public Direction Direction;
-    public Vector2Int To;
-}
-
 [CreateAssetMenu(fileName = "DungeonLayout", menuName = "Dungeon/Layout")]
 public class DungeonLayoutSO : ScriptableObject
 {
