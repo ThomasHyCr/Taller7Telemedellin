@@ -41,23 +41,23 @@ public class MainViewDisplay : MonoBehaviour
     }
 
     IEnumerator CrossFade(Sprite newSprite)
+{
+    next.sprite = newSprite;
+    next.color = new Color(1, 1, 1, 0);
+
+    float t = 0f;
+    while (t < fadeDuration)
     {
-        next.sprite = newSprite;
-        next.color = new Color(1, 1, 1, 0);
-
-        float t = 0f;
-        while (t < fadeDuration)
-        {
-            t += Time.deltaTime;
-            float a = t / fadeDuration;
-            next.color = new Color(1, 1, 1, a);
-            current.color = new Color(1, 1, 1, 1 - a);
-            yield return null;
-        }
-
-        next.color = Color.white;
-        current.color = Color.white;
-
-        (current, next) = (next, current);
+        t += Time.deltaTime;
+        float a = Mathf.Clamp01(t / fadeDuration);
+        next.color = new Color(1, 1, 1, a);
+        current.color = new Color(1, 1, 1, 1 - a);
+        yield return null;
     }
+
+    next.color = Color.white;              // la nueva queda visible (alpha 1)
+    current.color = new Color(1, 1, 1, 0);  // la vieja queda oculta (alpha 0) ← corregido
+
+    (current, next) = (next, current);
+}
 }
