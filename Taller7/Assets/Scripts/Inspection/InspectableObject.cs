@@ -1,19 +1,11 @@
 using UnityEngine;
 
-public class InspectableObject : MonoBehaviour, IInspectableNode
+public class InspectableObject : MonoBehaviour, IInspectable
 {
-    [Header("Navegación (WASD) — arrastra otro InspectableObject o el ReturnButtonNode")]
-    [SerializeField] private MonoBehaviour up, down, left, right;
-
-    [Header("Configuración")]
     [SerializeField] private bool isCorrectObject;
     [SerializeField] private GameObject highlightVisual; // outline/glow, desactivado por defecto
 
-    public IInspectableNode Up => up as IInspectableNode;
-    public IInspectableNode Down => down as IInspectableNode;
-    public IInspectableNode Left => left as IInspectableNode;
-    public IInspectableNode Right => right as IInspectableNode;
-    public Transform HighlightTarget => transform;
+    public RectTransform RectTransform => transform as RectTransform;
 
     public void SetHighlighted(bool value)
     {

@@ -1,15 +1,10 @@
 using UnityEngine;
 
-public class ReturnButtonNode : MonoBehaviour, IInspectableNode
+public class ReturnButtonNode : MonoBehaviour, IInspectable
 {
-    [SerializeField] private MonoBehaviour up, down, left, right;
     [SerializeField] private GameObject highlightVisual;
 
-    public IInspectableNode Up => up as IInspectableNode;
-    public IInspectableNode Down => down as IInspectableNode;
-    public IInspectableNode Left => left as IInspectableNode;
-    public IInspectableNode Right => right as IInspectableNode;
-    public Transform HighlightTarget => transform;
+    public RectTransform RectTransform => transform as RectTransform;
 
     public void SetHighlighted(bool value)
     {
