@@ -9,6 +9,7 @@ public class DungeonLayoutSO : ScriptableObject
     {
         public Vector2Int GridPosition;
         public Sprite RoomImage;
+        public bool IsSpecial;
     }
 
     public List<RoomData> Rooms = new();

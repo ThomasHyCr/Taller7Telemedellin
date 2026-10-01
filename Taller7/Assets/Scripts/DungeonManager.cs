@@ -8,6 +8,7 @@ public class DungeonManager : MonoBehaviour
 
     public Dictionary<Vector2Int, RoomNode> Rooms = new();
     public RoomNode CurrentRoom { get; private set; }
+    public RoomNode PreviousRoom { get; private set; } 
 
     public event Action<RoomNode> OnCurrentRoomChanged;
     public event Action<RoomNode> OnRoomStateChanged;
@@ -42,6 +43,7 @@ public class DungeonManager : MonoBehaviour
 
         RoomNode target = CurrentRoom.Connections[dir];
 
+        PreviousRoom = CurrentRoom;
         CurrentRoom.State = RoomState.Visited;
         OnRoomStateChanged?.Invoke(CurrentRoom);
 
@@ -61,5 +63,19 @@ public class DungeonManager : MonoBehaviour
 
         OnCurrentRoomChanged?.Invoke(CurrentRoom);
         return true;
+    }
+
+    public void ReturnToPreviousRoom()
+    {
+        if (PreviousRoom == null) return;
+
+        CurrentRoom.State = RoomState.Visited;
+        OnRoomStateChanged?.Invoke(CurrentRoom);
+
+        CurrentRoom = PreviousRoom;
+        CurrentRoom.State = RoomState.Current;
+        OnRoomStateChanged?.Invoke(CurrentRoom);
+
+        OnCurrentRoomChanged?.Invoke(CurrentRoom);
     }
 }

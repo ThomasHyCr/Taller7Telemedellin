@@ -4,9 +4,12 @@ using UnityEngine;
 public enum Direction { Up, Down, Left, Right }
 public enum RoomState { Unvisited, Discovered, Visited, Current }
 
+
 [System.Serializable]
 public class RoomNode
 {
+    public bool IsSpecial;
+    public bool SpecialSolved;
     public Vector2Int GridPosition;
     public RoomState State = RoomState.Unvisited;
     public Dictionary<Direction, RoomNode> Connections = new();

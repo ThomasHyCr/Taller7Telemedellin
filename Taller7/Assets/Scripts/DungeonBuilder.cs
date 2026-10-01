@@ -19,7 +19,8 @@ public class DungeonBuilder : MonoBehaviour
             var node = new RoomNode
             {
                 GridPosition = roomData.GridPosition,
-                RoomImage = roomData.RoomImage
+                RoomImage = roomData.RoomImage,
+                IsSpecial = roomData.IsSpecial
             };
             manager.Rooms[roomData.GridPosition] = node;
         }
