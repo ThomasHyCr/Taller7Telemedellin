@@ -1,11 +1,12 @@
 using System;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class SimpleMessagePrompt : MonoBehaviour
 {
     [SerializeField] private GameObject panel;
-    [SerializeField] private Text messageText;
+    [SerializeField] private TMP_Text messageText;
 
     private Action onDismiss;
 
