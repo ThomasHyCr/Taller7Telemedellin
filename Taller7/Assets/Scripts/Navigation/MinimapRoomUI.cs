@@ -30,7 +30,7 @@ public class MinimapRoomUI : MonoBehaviour
         };
 
         // Solo oscila si ya fue descubierta (no revela salas especiales ocultas en la niebla)
-        isSpecialPending = node.IsSpecial && !node.SpecialSolved && node.State != RoomState.Unvisited;
+        isSpecialPending = node.IsSpecial && !node.SpecialSolved;
 
         if (!isSpecialPending)
             background.color = baseColor;
