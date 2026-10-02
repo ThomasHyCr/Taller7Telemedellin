@@ -978,7 +978,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InspectableObject
   isCorrectObject: 1
   highlightVisual: {fileID: 113961834}
-  cutsceneClip: {fileID: 0}
+  cutsceneClip: {fileID: 32900000, guid: f0c29beb531751040b4e589637803ea8, type: 3}
 --- !u!222 &260156307
 CanvasRenderer:
   m_ObjectHideFlags: 0
