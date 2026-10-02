@@ -64,6 +64,10 @@ public class DungeonManager : MonoBehaviour
         OnCurrentRoomChanged?.Invoke(CurrentRoom);
         return true;
     }
+    public void RefreshRoomVisual(RoomNode room)
+    {
+        OnRoomStateChanged?.Invoke(room);
+    }
 
     public void ReturnToPreviousRoom()
     {

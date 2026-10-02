@@ -1,22 +1,50 @@
 using System;
-using System.Collections;
 using UnityEngine;
+using UnityEngine.Video;
 
 public class CutscenePlayer : MonoBehaviour
 {
     public static CutscenePlayer Instance;
-    void Awake() => Instance = this;
 
-    // TODO: reemplazar por VideoPlayer real (clips de 30-45s) cuando se implemente esa parte.
-    public void PlayInspectionCutscene(Action onFinished)
+    [SerializeField] private GameObject overlay;      // Panel de pantalla completa, opaco, inicialmente desactivado
+    [SerializeField] private VideoPlayer videoPlayer;
+
+    private Action onFinishedCallback;
+
+    void Awake()
     {
-        StartCoroutine(FakeCutsceneRoutine(onFinished));
+        Instance = this;
+        overlay.SetActive(false);
+
+        videoPlayer.playOnAwake = false;
+        videoPlayer.isLooping = false;
+        videoPlayer.loopPointReached += HandleVideoFinished;
     }
 
-    IEnumerator FakeCutsceneRoutine(Action onFinished)
+    public void PlayInspectionCutscene(VideoClip clip, Action onFinished)
     {
+        if (clip == null)
+        {
+            Debug.LogWarning("PlayInspectionCutscene llamado sin VideoClip asignado — se salta la cutscene.");
+            onFinished?.Invoke();
+            return;
+        }
+
+        onFinishedCallback = onFinished;
         GameStateManager.Instance.SetState(GameState.PlayingCutscene);
-        yield return new WaitForSeconds(2f); // placeholder de duración
-        onFinished?.Invoke();
+
+        overlay.SetActive(true);
+        videoPlayer.clip = clip;
+        videoPlayer.Play();
+    }
+
+    void HandleVideoFinished(VideoPlayer vp)
+    {
+        overlay.SetActive(false);
+        videoPlayer.clip = null;
+
+        var callback = onFinishedCallback;
+        onFinishedCallback = null;
+        callback?.Invoke();
     }
 }
