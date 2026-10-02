@@ -34,5 +34,7 @@ public class InspectableObject : MonoBehaviour, IInspectable
 
         SpecialRoomRegistry.Instance.DeactivateRoom(room.GridPosition);
         GameStateManager.Instance.SetState(GameState.Exploring);
+
+        SpecialRoomProgressTracker.Instance.NotifyRoomSolved(room.GridPosition);
     }
 }

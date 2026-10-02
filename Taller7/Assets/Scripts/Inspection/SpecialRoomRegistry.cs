@@ -46,4 +46,18 @@ public class SpecialRoomRegistry : MonoBehaviour
         if (entry != null) entry.InspectionPanel.gameObject.SetActive(false);
         cursorController.Deactivate();
     }
+
+    public void ReplaceRoomContent(Vector2Int gridPosition, RectTransform newPanel, List<MonoBehaviour> newNodes, Vector2 newCursorStart)
+    {
+        var entry = specialRooms.Find(e => e.RoomGridPosition == gridPosition);
+        if (entry == null)
+        {
+            Debug.LogWarning($"ReplaceRoomContent: no hay entrada registrada para {gridPosition}");
+          return;
+        }
+
+        entry.InspectionPanel = newPanel;
+        entry.InspectableNodes = newNodes;
+        entry.CursorStartPosition = newCursorStart;
+    }
 }
