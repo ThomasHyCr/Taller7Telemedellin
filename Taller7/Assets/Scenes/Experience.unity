@@ -1335,9 +1335,9 @@ RectTransform:
   - {fileID: 58611612}
   - {fileID: 1991275594}
   - {fileID: 7187484369104673620}
-  - {fileID: 1637688226}
   - {fileID: 505204753}
   - {fileID: 418080275}
+  - {fileID: 1637688226}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -3545,12 +3545,12 @@ GameObject:
   - component: {fileID: 1637688227}
   - component: {fileID: 1637688229}
   m_Layer: 5
-  m_Name: tempTextPanel
+  m_Name: MessagePromptPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1637688226
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3568,7 +3568,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.223, y: 0}
   m_AnchorMax: {x: 0.7782499, y: 0.23214816}
-  m_AnchoredPosition: {x: -1.5, y: 2.0793457}
+  m_AnchoredPosition: {x: 63, y: 28}
   m_SizeDelta: {x: -0.56622314, y: 4.1586914}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1637688227
@@ -3584,7 +3584,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.3301887, g: 0.3301887, b: 0.3301887, a: 0.7529412}
+  m_Color: {r: 0.3301887, g: 0.3301887, b: 0.3301887, a: 0.72156864}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
