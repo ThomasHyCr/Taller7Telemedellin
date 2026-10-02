@@ -15,52 +15,76 @@ MonoBehaviour:
   Rooms:
   - GridPosition: {x: 0, y: 0}
     RoomImage: {fileID: 21300000, guid: 61f007424119da944817706db7ac3e64, type: 3}
+    IsSpecial: 1
   - GridPosition: {x: -3, y: -4}
     RoomImage: {fileID: 21300000, guid: 6ea4431cb1ad8864bab4d5e98b98f262, type: 3}
+    IsSpecial: 1
   - GridPosition: {x: 3, y: -3}
     RoomImage: {fileID: 21300000, guid: fcb186603f36029458b90f682c3532d6, type: 3}
+    IsSpecial: 0
   - GridPosition: {x: -3, y: 4}
     RoomImage: {fileID: 21300000, guid: cd925c2dbc2307446a325e92063fd7d8, type: 3}
+    IsSpecial: 1
   - GridPosition: {x: 3, y: 4}
     RoomImage: {fileID: 21300000, guid: f52d5a5cd6dd40d4dbd1de08e1932dcf, type: 3}
+    IsSpecial: 1
   - GridPosition: {x: -2, y: -4}
     RoomImage: {fileID: 21300000, guid: 63913b150c555504095a434c79a53fd1, type: 3}
+    IsSpecial: 0
   - GridPosition: {x: -2, y: -2}
     RoomImage: {fileID: 21300000, guid: 1e3c0dd049505a04c8b9f58527960810, type: 3}
+    IsSpecial: 0
   - GridPosition: {x: -2, y: -1}
     RoomImage: {fileID: 21300000, guid: 925cd04ac3f4ca04fb13743eaf1cde43, type: 3}
+    IsSpecial: 0
   - GridPosition: {x: -2, y: 1}
     RoomImage: {fileID: 21300000, guid: 56e65bfd1920b26478d01e2f65d21339, type: 3}
+    IsSpecial: 0
   - GridPosition: {x: -2, y: 3}
     RoomImage: {fileID: 21300000, guid: 5c5a8009bf6d10d4781f4fab66d8ba05, type: 3}
+    IsSpecial: 0
   - GridPosition: {x: -3, y: 3}
     RoomImage: {fileID: 21300000, guid: 3d2de5b84a87fc549a3b38c56a6bcc41, type: 3}
+    IsSpecial: 0
   - GridPosition: {x: -1, y: -1}
     RoomImage: {fileID: 21300000, guid: acd6f323013b234498619cbd2b03a0c2, type: 3}
+    IsSpecial: 0
   - GridPosition: {x: -1, y: 0}
     RoomImage: {fileID: 21300000, guid: 40e7cbc0ab6a24e44aad89f5e20fbe4a, type: 3}
+    IsSpecial: 0
   - GridPosition: {x: 1, y: -2}
     RoomImage: {fileID: 21300000, guid: d6ca09831c4a41f4ea2e613caa7d6e1d, type: 3}
+    IsSpecial: 0
   - GridPosition: {x: 1, y: -1}
     RoomImage: {fileID: 21300000, guid: e21b8179effe6334ca3527b94d1be7c3, type: 3}
+    IsSpecial: 0
   - GridPosition: {x: 1, y: 0}
     RoomImage: {fileID: 21300000, guid: 53a1b5e1d6b37f0418e5b3fe0a2adcc5, type: 3}
+    IsSpecial: 0
   - GridPosition: {x: 1, y: 1}
     RoomImage: {fileID: 21300000, guid: 385ea44fcc61bf14bbd6851b7df7888e, type: 3}
+    IsSpecial: 0
   - GridPosition: {x: 1, y: 2}
     RoomImage: {fileID: 21300000, guid: f47499900fb74f2459fc787515bcaa27, type: 3}
+    IsSpecial: 0
   - GridPosition: {x: 1, y: 3}
     RoomImage: {fileID: 21300000, guid: a175bf9874a34cb4888e653825fe9263, type: 3}
+    IsSpecial: 0
   - GridPosition: {x: 2, y: -3}
     RoomImage: {fileID: 21300000, guid: 1a4838e2bed41e4469fa89478c4648aa, type: 3}
+    IsSpecial: 0
   - GridPosition: {x: 2, y: -2}
     RoomImage: {fileID: 21300000, guid: d9b49cc330dbda44d8484e2f0b98fa75, type: 3}
+    IsSpecial: 0
   - GridPosition: {x: 3, y: -2}
     RoomImage: {fileID: 21300000, guid: 66738fb679005574c84d8172c3e79d07, type: 3}
+    IsSpecial: 0
   - GridPosition: {x: 3, y: 1}
     RoomImage: {fileID: 21300000, guid: a17fb689e9fb4f549b4f4dbb5084dda5, type: 3}
+    IsSpecial: 0
   - GridPosition: {x: 3, y: 3}
     RoomImage: {fileID: 21300000, guid: ba3bc595535e07b4e90b944ab7fb7de8, type: 3}
+    IsSpecial: 0
   Connections:
   - From: {x: -3, y: -4}
     Direction: 3

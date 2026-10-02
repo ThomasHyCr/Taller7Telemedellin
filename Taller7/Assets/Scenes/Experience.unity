@@ -244,16 +244,20 @@ MonoBehaviour:
   specialRooms:
   - RoomGridPosition: {x: 0, y: 0}
     InspectionPanel: {fileID: 0}
-    DefaultSelected: {fileID: 0}
+    InspectableNodes: []
+    CursorStartPosition: {x: 0, y: 0}
   - RoomGridPosition: {x: 0, y: 0}
     InspectionPanel: {fileID: 0}
-    DefaultSelected: {fileID: 0}
+    InspectableNodes: []
+    CursorStartPosition: {x: 0, y: 0}
   - RoomGridPosition: {x: 0, y: 0}
     InspectionPanel: {fileID: 0}
-    DefaultSelected: {fileID: 0}
+    InspectableNodes: []
+    CursorStartPosition: {x: 0, y: 0}
   - RoomGridPosition: {x: 0, y: 0}
     InspectionPanel: {fileID: 0}
-    DefaultSelected: {fileID: 0}
+    InspectableNodes: []
+    CursorStartPosition: {x: 0, y: 0}
   cursorController: {fileID: 1275199258}
 --- !u!4 &93516015
 Transform:
@@ -1399,6 +1403,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InspectionCursorController
   cursorVisual: {fileID: 418080275}
+  moveSpeed: 600
+  uiCamera: {fileID: 0}
 --- !u!4 &1275199259
 Transform:
   m_ObjectHideFlags: 0
