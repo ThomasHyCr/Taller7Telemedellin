@@ -5,7 +5,19 @@ public class InspectableObject : MonoBehaviour, IInspectable
 {
     [SerializeField] private bool isCorrectObject;
     [SerializeField] private GameObject highlightVisual; // outline/glow, desactivado por defecto
-    [SerializeField] private VideoClip cutsceneClip;      // solo se usa si isCorrectObject = true
+
+    [Header("Si es un objeto incorrecto")]
+    [SerializeField, TextArea(2, 4)] private string[] wrongObjectLines =
+    {
+        "No parece que haya nada interesante aquí."
+    };
+
+    [Header("Si es el objeto correcto")]
+    [SerializeField] private VideoClip cutsceneClip;
+    [SerializeField, TextArea(2, 4)] private string[] afterReportLines =
+    {
+        "Reportaje completado."
+    };
 
     public RectTransform RectTransform => transform as RectTransform;
 
@@ -18,8 +30,7 @@ public class InspectableObject : MonoBehaviour, IInspectable
     {
         if (!isCorrectObject)
         {
-            // TODO: cuando exista el sistema de diálogos, mostrar algo tipo "no parece nada interesante"
-            Debug.Log("Objeto incorrecto (sin efecto por ahora).");
+            DialogueManager.Instance.Show(wrongObjectLines);
             return;
         }
 
@@ -35,6 +46,7 @@ public class InspectableObject : MonoBehaviour, IInspectable
         SpecialRoomRegistry.Instance.DeactivateRoom(room.GridPosition);
         GameStateManager.Instance.SetState(GameState.Exploring);
 
-        SpecialRoomProgressTracker.Instance.NotifyRoomSolved(room.GridPosition);
+        // Muestra el mensaje del reportaje (y el de los 4 completados, si corresponde)
+        SpecialRoomProgressTracker.Instance.OnReportFinished(room.GridPosition, afterReportLines);
     }
 }
