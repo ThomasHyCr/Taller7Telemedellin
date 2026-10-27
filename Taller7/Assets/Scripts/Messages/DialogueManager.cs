@@ -35,7 +35,8 @@ public class DialogueManager : MonoBehaviour
         if (!IsActive) return;
         if (Time.frameCount == shownFrame) return; // ignora la misma pulsación que abrió el mensaje
         if (!Input.GetKeyDown(KeyCode.J)) return;
-
+        
+        AudioManager.Instance.PlayInteractSound();
         lineIndex++;
         if (lineIndex < current.Lines.Length) ShowCurrentLine();
         else FinishCurrent();

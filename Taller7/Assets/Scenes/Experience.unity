@@ -749,6 +749,7 @@ Transform:
   - {fileID: 312219036}
   - {fileID: 360769460}
   - {fileID: 1926989677}
+  - {fileID: 949180609}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &154054211
@@ -2464,6 +2465,57 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 835913883}
   m_CullTransparentMesh: 1
+--- !u!1 &949180608
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 949180609}
+  - component: {fileID: 949180610}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &949180609
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 949180608}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 130997123}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &949180610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 949180608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 234ab6072f071634a8cbb504ebd6943b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioManager
+  ambientClips:
+  - {fileID: 8300000, guid: a759f4d38f9c6aa41b0d90f783134b77, type: 3}
+  ambientVolume: 0.5
+  interactClip: {fileID: 8300000, guid: 4bf57b3b9bf797d4cac2cf42bed8f4d4, type: 3}
+  roomChangeClip: {fileID: 8300000, guid: 7c7d8ed708c62d4498d4ba86722001bb, type: 3}
+  sfxVolume: 0.654
+  roomChangeCooldown: 0.5
 --- !u!1 &959924914
 GameObject:
   m_ObjectHideFlags: 0
@@ -4824,8 +4876,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e204ba03c739f914c9da672b446d666d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SimpleMessagePrompt
-  panel: {fileID: 1637688225}
-  messageText: {fileID: 1277965196}
 --- !u!1 &1646123077
 GameObject:
   m_ObjectHideFlags: 0

@@ -32,8 +32,11 @@ public class InspectionCursorController : MonoBehaviour
 
         UpdateHover();
 
-        if (Input.GetKeyDown(KeyCode.J))
-            hovered?.Interact();
+        if (Input.GetKeyDown(KeyCode.J) && hovered != null)
+        {
+            AudioManager.Instance.PlayInteractSound();
+            hovered.Interact();
+        }
     }
 
     void MoveCursor(Vector2 delta)
