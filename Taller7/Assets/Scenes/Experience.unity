@@ -5921,6 +5921,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9ef2978ed46ea442a38bb8b04678b5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneIntroMessage
+  introClip: {fileID: 32900000, guid: 2c35bf2598d968646ab2b2be80cd8610, type: 3}
   introLines:
   - Pulsa J para avanzar los mensajes e interactuar con los objetos.
   - Usa W, A, S y D para moverte entre los lugares del mapa.

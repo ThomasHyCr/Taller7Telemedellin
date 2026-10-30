@@ -1,7 +1,10 @@
 using UnityEngine;
+using UnityEngine.Video;
 
 public class SceneIntroMessage : MonoBehaviour
 {
+    [SerializeField] private VideoClip introClip;
+
     [SerializeField, TextArea(2, 4)] private string[] introLines =
     {
         "Usa W, A, S y D para moverte entre los lugares del mapa.",
@@ -11,6 +14,12 @@ public class SceneIntroMessage : MonoBehaviour
 
     void Start()
     {
+        CutscenePlayer.Instance.PlayInspectionCutscene(introClip, OnIntroFinished);
+    }
+
+    void OnIntroFinished()
+    {
+        GameStateManager.Instance.SetState(GameState.Exploring);
         DialogueManager.Instance.Show(introLines);
     }
 }
