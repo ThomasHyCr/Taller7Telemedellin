@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -9,6 +10,13 @@ public class DialogueManager : MonoBehaviour
 
     [SerializeField] private GameObject panel;        // el panel visual del mensaje
     [SerializeField] private TMP_Text messageText;
+
+    [Header("Personaje")]
+    [SerializeField] private Image characterImage;
+    [SerializeField] private Sprite[] characterSprites;     // tus 3 sprites
+    [SerializeField] private bool changeEveryLine = true;   // false = solo cambia al abrir un mensaje nuevo
+
+    private int lastSpriteIndex = -1;
 
     private class Entry
     {
@@ -81,6 +89,25 @@ public class DialogueManager : MonoBehaviour
     void ShowCurrentLine()
     {
         messageText.text = current.Lines[lineIndex];
+
+        if (changeEveryLine || lineIndex == 0)
+        PickRandomCharacter();
+    }
+
+    void PickRandomCharacter()
+    {
+        if (characterImage == null || characterSprites == null || characterSprites.Length == 0) return;
+
+        int index = 0;
+
+        if (characterSprites.Length > 1)
+        {
+        do { index = UnityEngine.Random.Range(0, characterSprites.Length); }
+        while (index == lastSpriteIndex);
+        }
+
+        lastSpriteIndex = index;
+        characterImage.sprite = characterSprites[index];
     }
 
     void FinishCurrent()
