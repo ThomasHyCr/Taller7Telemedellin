@@ -22,17 +22,17 @@ public class InspectionCursorController : MonoBehaviour
         if (GameStateManager.Instance.CurrentState != GameState.Inspecting) return;
 
         Vector2 input = Vector2.zero;
-        if (Input.GetKey(KeyCode.W)) input.y += 1;
-        if (Input.GetKey(KeyCode.S)) input.y -= 1;
-        if (Input.GetKey(KeyCode.A)) input.x -= 1;
-        if (Input.GetKey(KeyCode.D)) input.x += 1;
+        if (GameInput.GetKey(KeyCode.W)) input.y += 1;
+        if (GameInput.GetKey(KeyCode.S)) input.y -= 1;
+        if (GameInput.GetKey(KeyCode.A)) input.x -= 1;
+        if (GameInput.GetKey(KeyCode.D)) input.x += 1;
 
         if (input != Vector2.zero)
             MoveCursor(input.normalized * moveSpeed * Time.deltaTime);
 
         UpdateHover();
 
-        if (Input.GetKeyDown(KeyCode.J) && hovered != null)
+        if (GameInput.GetKeyDown(KeyCode.J) && hovered != null)
         {
             AudioManager.Instance.PlayInteractSound();
             hovered.Interact();

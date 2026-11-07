@@ -3,6 +3,7 @@ using UnityEngine;
 
 public enum GameState
 {
+    Title,
     Exploring,
     ShowingMessage,
     Inspecting,
@@ -13,7 +14,7 @@ public enum GameState
 public class GameStateManager : MonoBehaviour
 {
     public static GameStateManager Instance;
-    public GameState CurrentState { get; private set; } = GameState.Exploring;
+    public GameState CurrentState { get; private set; } = GameState.Title;
 
     public event Action<GameState, GameState> OnStateChanged; // (anterior, nuevo)
 

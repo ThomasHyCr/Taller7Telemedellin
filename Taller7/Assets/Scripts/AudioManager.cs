@@ -36,6 +36,7 @@ public class AudioManager : MonoBehaviour
     {
         GameStateManager.Instance.OnStateChanged += HandleStateChanged;
         DungeonManager.Instance.OnCurrentRoomChanged += HandleRoomChanged;
+        ApplyAmbientPause(); // por si el juego arranca en Title
     }
 
     void OnDestroy()
@@ -53,6 +54,7 @@ public class AudioManager : MonoBehaviour
         if (ambientPaused || ambientClips == null || ambientClips.Length == 0) return;
         if (!ambientSource.isPlaying) PlayNextAmbient();
     }
+
 
     // ---------- Ambiente ----------
 
@@ -73,16 +75,18 @@ public class AudioManager : MonoBehaviour
 
     void HandleStateChanged(GameState previous, GameState current)
     {
-        if (current == GameState.PlayingCutscene)
-        {
-            ambientPaused = true;
-            ambientSource.Pause();
-        }
-        else if (previous == GameState.PlayingCutscene)
-        {
-            ambientPaused = false;
-            ambientSource.UnPause();
-        }
+        ApplyAmbientPause();
+    }
+
+    void ApplyAmbientPause()
+    {
+        // Se lee el estado real y no el del evento: si un cambio de estado provoca otro enseguida
+        // (por ejemplo, al cerrar el panel de inicio y arrancar el video), el evento llegaría desactualizado.
+        var state = GameStateManager.Instance.CurrentState;
+        ambientPaused = state == GameState.Title || state == GameState.PlayingCutscene;
+
+        if (ambientPaused) ambientSource.Pause();
+        else ambientSource.UnPause();
     }
 
     // ---------- Efectos ----------

@@ -21,11 +21,15 @@ public class CutscenePlayer : MonoBehaviour
         videoPlayer.loopPointReached += HandleVideoFinished;
     }
 
-    public void PlayInspectionCutscene(VideoClip clip, Action onFinished)
+    /// <summary>
+    /// Reproduce un video a pantalla completa. Mientras dura, el estado del juego es PlayingCutscene.
+    /// Al terminar, el estado NO se restaura: quien llama decide cuál sigue en onFinished.
+    /// </summary>
+    public void Play(VideoClip clip, Action onFinished)
     {
         if (clip == null)
         {
-            Debug.LogWarning("PlayInspectionCutscene llamado sin VideoClip asignado — se salta la cutscene.");
+            Debug.LogWarning("CutscenePlayer.Play llamado sin VideoClip asignado — se salta la animación.");
             onFinished?.Invoke();
             return;
         }
@@ -37,6 +41,9 @@ public class CutscenePlayer : MonoBehaviour
         videoPlayer.clip = clip;
         videoPlayer.Play();
     }
+
+    // Se mantiene el nombre anterior para no tener que tocar InspectableObject
+    public void PlayInspectionCutscene(VideoClip clip, Action onFinished) => Play(clip, onFinished);
 
     void HandleVideoFinished(VideoPlayer vp)
     {
