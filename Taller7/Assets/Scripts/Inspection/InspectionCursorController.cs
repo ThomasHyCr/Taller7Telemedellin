@@ -22,10 +22,10 @@ public class InspectionCursorController : MonoBehaviour
         if (GameStateManager.Instance.CurrentState != GameState.Inspecting) return;
 
         Vector2 input = Vector2.zero;
-        if (GameInput.GetKey(KeyCode.W)) input.y += 1;
-        if (GameInput.GetKey(KeyCode.S)) input.y -= 1;
-        if (GameInput.GetKey(KeyCode.A)) input.x -= 1;
-        if (GameInput.GetKey(KeyCode.D)) input.x += 1;
+        if (GameInput.GetKey(KeyCode.D)) input.y += 1;
+        if (GameInput.GetKey(KeyCode.A)) input.y -= 1;
+        if (GameInput.GetKey(KeyCode.W)) input.x -= 1;
+        if (GameInput.GetKey(KeyCode.S)) input.x += 1;
 
         if (input != Vector2.zero)
             MoveCursor(input.normalized * moveSpeed * Time.deltaTime);
