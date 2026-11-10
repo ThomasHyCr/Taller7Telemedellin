@@ -413,7 +413,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1179918943}
   - {fileID: 1873930408}
   - {fileID: 610352374}
   m_Father: {fileID: 505204753}
@@ -1206,7 +1205,7 @@ MonoBehaviour:
   highlightVisual: {fileID: 113961834}
   wrongObjectLines:
   - "No parece que haya nada interesante aqu\xED."
-  cutsceneClip: {fileID: 32900000, guid: f0c29beb531751040b4e589637803ea8, type: 3}
+  cutsceneClip: {fileID: 32900000, guid: 09b5ca90fb7cb1344b589a8c61cddbbe, type: 3}
   afterReportLines:
   - Reportaje completado.
 --- !u!222 &260156307
@@ -1892,6 +1891,7 @@ RectTransform:
   - {fileID: 58611612}
   - {fileID: 1991275594}
   - {fileID: 7187484369104673620}
+  - {fileID: 1179918943}
   - {fileID: 505204753}
   - {fileID: 418080275}
   - {fileID: 1637688226}
@@ -3650,12 +3650,12 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1179918942}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 82517582}
+  m_Father: {fileID: 447895384}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -3682,7 +3682,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 3580326677000079892, guid: 16dd430abd509b44bb19b61487e8d2e3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 00d37fa6f3f1837449fb0fdbce248686, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4256,7 +4256,7 @@ MonoBehaviour:
   highlightVisual: {fileID: 1087495211}
   wrongObjectLines:
   - "No parece que haya nada interesante aqu\xED."
-  cutsceneClip: {fileID: 0}
+  cutsceneClip: {fileID: 32900000, guid: 29aa3bfccf58a914d9d2289bf2965bb7, type: 3}
   afterReportLines:
   - Reportaje completado.
 --- !u!222 &1360711727
@@ -4324,11 +4324,11 @@ MonoBehaviour:
   - {fileID: 610352376}
   reactivatedCursorStart: {x: 0, y: 0}
   allReportsCompletedLines:
-  - Se completaron los cuatro primeros reportajes.
-  - Algo ha cambiado en el aeropuerto.
+  - Se completaron los cuatro reportajes.
+  - Ve al aeropuerto, para viajar por tu premio.
   finalLines:
   - Has completado todos los reportajes.
-  - "Gracias por jugar. La experiencia volver\xE1 a empezar."
+  - "Gracias por participar. Ten un lindo d\xEDa"
 --- !u!1 &1365646130
 GameObject:
   m_ObjectHideFlags: 0
@@ -6087,7 +6087,7 @@ MonoBehaviour:
   highlightVisual: {fileID: 1302889523}
   wrongObjectLines:
   - "No parece que haya nada interesante aqu\xED."
-  cutsceneClip: {fileID: 0}
+  cutsceneClip: {fileID: 32900000, guid: d0b44a3bfdcb93547a14cdd0c52f1cec, type: 3}
   afterReportLines:
   - Reportaje completado.
 --- !u!222 &1873930411
@@ -6390,10 +6390,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9ef2978ed46ea442a38bb8b04678b5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneIntroMessage
-  introClip: {fileID: 32900000, guid: 2c35bf2598d968646ab2b2be80cd8610, type: 3}
+  introClip: {fileID: 32900000, guid: 7deb1da6d56ebbd4d9c3a9d17fb45c45, type: 3}
   introLines:
-  - Pulsa J para avanzar los mensajes e interactuar con los objetos.
-  - Usa W, A, S y D para moverte entre los lugares del mapa.
+  - "Pulsa el bot\xF3n de interacci\xF3n para avanzar los mensajes e interactuar
+    con los objetos."
+  - Usa los botones de flechas para moverte entre los lugares del mapa.
   - Los lugares que brillan en amarillo tienen algo que inspeccionar.
 --- !u!1 &1966550950
 GameObject:
