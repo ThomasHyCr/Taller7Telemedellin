@@ -752,6 +752,7 @@ Transform:
   - {fileID: 949180609}
   - {fileID: 992128839}
   - {fileID: 197818378}
+  - {fileID: 1516742545}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &146117150
@@ -1513,7 +1514,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &399711283
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2906,7 +2907,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &973240991
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4231,6 +4232,9 @@ MonoBehaviour:
   allReportsCompletedLines:
   - Se completaron los cuatro primeros reportajes.
   - Algo ha cambiado en el aeropuerto.
+  finalLines:
+  - Has completado todos los reportajes.
+  - "Gracias por jugar. La experiencia volver\xE1 a empezar."
 --- !u!1 &1365646130
 GameObject:
   m_ObjectHideFlags: 0
@@ -4803,6 +4807,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1515564237}
   m_CullTransparentMesh: 1
+--- !u!1 &1516742544
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1516742545}
+  - component: {fileID: 1516742546}
+  m_Layer: 0
+  m_Name: SceneReloader
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1516742545
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1516742544}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 130997123}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1516742546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1516742544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c4722673c7cc874fa6a387ac377aabb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SceneReloader
+  reloadKey: 114
 --- !u!1 &1526346391
 GameObject:
   m_ObjectHideFlags: 0
@@ -5162,7 +5211,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.223, y: 0}
   m_AnchorMax: {x: 0.7782499, y: 0.23214816}
-  m_AnchoredPosition: {x: 63, y: 28}
+  m_AnchoredPosition: {x: 0.2831421, y: 19.07898}
   m_SizeDelta: {x: -0.56622314, y: 4.1586914}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1637688227
@@ -6395,7 +6444,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1991275594
 RectTransform:
   m_ObjectHideFlags: 0
