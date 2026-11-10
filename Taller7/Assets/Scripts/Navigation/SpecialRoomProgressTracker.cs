@@ -9,6 +9,9 @@ public class SpecialRoomProgressTracker : MonoBehaviour
     [Header("Las 4 salas especiales originales (incluye la que se reactiva)")]
     [SerializeField] private List<Vector2Int> originalSpecialRooms;
 
+    [Header("Imagen de fondo del final (opcional)")]
+    [SerializeField] private GameObject finalBackground; // debe estar DESACTIVADO en el editor
+
     [Header("Sala que se reactiva (Aeropuerto)")]
     [SerializeField] private Vector2Int reactivatedRoomPosition;
     [SerializeField] private RectTransform reactivatedPanel;        // InspectionPanel de la fase 2
@@ -57,7 +60,12 @@ public class SpecialRoomProgressTracker : MonoBehaviour
         }
 
         if (isFinalReport)
+        {
             lines.AddRange(finalLines);
+
+            if (finalBackground != null)
+                finalBackground.SetActive(true); // aparece apenas termina la animación; la recarga de la escena lo vuelve a ocultar
+        }
 
         // Si el último reportaje de los 4 fue justo el de la sala que se reactiva,
         // te devuelve a la casilla anterior cuando termines de leer los mensajes.
