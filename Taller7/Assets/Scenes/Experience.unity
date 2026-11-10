@@ -2746,10 +2746,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
   ambientClips:
   - {fileID: 8300000, guid: a759f4d38f9c6aa41b0d90f783134b77, type: 3}
-  ambientVolume: 0.5
+  ambientVolume: 0.362
   interactClip: {fileID: 8300000, guid: 4bf57b3b9bf797d4cac2cf42bed8f4d4, type: 3}
   roomChangeClip: {fileID: 8300000, guid: 7c7d8ed708c62d4498d4ba86722001bb, type: 3}
-  sfxVolume: 0.654
+  sfxVolume: 0.386
   roomChangeCooldown: 0.5
 --- !u!1 &959924914
 GameObject:
